@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasa Jokian Tugas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Jasa Jokian Tugas</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Layanan</a></li>
+                    <li><a href="#contact">Kontak dan Sosial Media</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="container">
+            <h2>Selamat Datang di Jasa Jokian Tugas</h2>
+            <p>Kami menyediakan layanan untuk membantu Anda menyelesaikan tugas-tugas pelajar dan pekerjaan dengan cepat dan tepat!</p>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Layanan Kami</h2>
+            <ul class="accordion">
+                <li>
+                    <a href="#!">Pengerjaan Tugas Perguruan Tinggi</a>
+                    <ul class="panel">
+                        <li>Penulisan Makalah dan Laporan</li>
+                        <li>Pengerjaan Soal dan Ujian Online</li>
+                        <li>Penyelesaian Tugas Proyek dan Skripsi</li>
+                        <li>Jasa Desain Grafis dan Presentasi</li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#!">Pengerjaan Tugas Pendidikan Menengah Atas</a>
+                    <ul class="panel">
+                        <li>Matematika: Soal Latihan, Ulangan Harian, Ujian Tengah Semester</li>
+                        <li>Fisika: Laporan Praktikum, Tugas Pemahaman Materi</li>
+                        <li>Kimia: Penyelesaian Soal, Pengerjaan Tugas Praktikum</li>
+                        <li>Bahasa Inggris: Terjemahan Teks, Penyelesaian Soal Essay</li>
+                        <li>Sejarah: Pembuatan Resume, Rangkuman Materi</li>
+                        <li>Geografi: Tugas Analisis, Pembuatan Peta Sederhana</li>
+                    </ul>
+                </li>
+				<li>
+                    <a href="#!">Layanan untuk Pekerja</a>
+                    <ul class="panel">
+                        <li>Penyusunan Laporan Kerja dan Laporan Bulanan</li>
+                        <li>Pembuatan Presentasi untuk Meeting dan Seminar</li>
+                        <li>Pengisian dan Analisis Data Spreadsheet</li>
+                        <li>Penyusunan Rencana Proyek dan Proposal</li>
+                        <li>Penulisan Artikel atau Konten untuk Blog Perusahaan</li>
+                        <li>Jasa Terjemahan Dokumen Bisnis</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="order">
+        <div class="container">
+            <h2>Pesan Layanan</h2>
+            <form action="submit_order.php" method="POST">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">No Telepon:</label>
+                <input type="text" id="phone" name="phone" required>
+
+                <label for="category">Kategori Layanan:</label>
+                <select id="category" name="category" required>
+                    <option value="Pengerjaan Tugas Perguruan Tinggi">Pengerjaan Tugas Perguruan Tinggi</option>
+                    <option value="Pengerjaan Tugas Pendidikan Menengah Atas">Pengerjaan Tugas Pendidikan Menengah Atas</option>
+                    <option value="Layanan untuk Pekerja">Layanan untuk Pekerja</option>
+                </select>
+
+                <label for="details">Rincian Pesanan:</label>
+                <textarea id="details" name="details" required></textarea>
+
+                <button type="submit">Kirim Pesanan</button>
+            </form>
+        </div>
+    </section>
+    <section id="contact">
+            <div class="social-media">
+                <h3>Ikuti Kami di Sosial Media:</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Jasa Jokian Tugas. Semua hak dilindungi undang-undang.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

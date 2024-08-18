@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lihat Pesanan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Pesanan Masuk</h1>
+        </div>
+    </header>
+
+    <section id="orders">
+        <div class="container">
+            <h2>Detail Semua Pesanan</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nama</th>
+                        <th>Email</th>
+                        <th>No Telepon</th>
+                        <th>Kategori Layanan</th>
+                        <th>Rincian</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    // Membaca data dari file JSON
+                    $jsonFile = 'orders.json';
+                    if (file_exists($jsonFile)) {
+                        $orders = json_decode(file_get_contents($jsonFile), true);
+                        foreach ($orders as $order) {
+                            echo '<tr>';
+                            echo '<td>' . htmlspecialchars($order['name']) . '</td>';
+                            echo '<td>' . htmlspecialchars($order['email']) . '</td>';
+                            echo '<td>' . htmlspecialchars($order['phone']) . '</td>';
+                            echo '<td>' . htmlspecialchars($order['category']) . '</td>';
+                            echo '<td>' . htmlspecialchars($order['details']) . '</td>';
+                            echo '</tr>';
+                        }
+                    } else {
+                        echo '<tr><td colspan="5">Belum ada pesanan yang masuk.</td></tr>';
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Jasa Jokian Tugas. Semua hak dilindungi undang-undang.</p>
+        </div>
+    </footer>
+</body>
+</html>
